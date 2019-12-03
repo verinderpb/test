@@ -31,8 +31,8 @@ project {
 }
 
 object Build : BuildType({
-    name = "Build"
-    description = "test 123"
+    name = "Canary_NonProd_Mgmt"
+    description = "Deploys mgmt build in Canary NonP"
 
     vcs {
         root(DslContext.settingsRoot)
