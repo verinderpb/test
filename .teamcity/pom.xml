@@ -1,28 +1,26 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <name>Test Config DSL Script</name>
-  <groupId>Test</groupId>
-  <artifactId>Test_dsl</artifactId>
+  <name>Workspaces Config DSL Script</name>
+  <properties>
+    <kotlin.version>1.1.2</kotlin.version>
+    <teamcity.dsl.version>2017.1.2</teamcity.dsl.version>
+  </properties>
+  <groupId>Workspaces</groupId>
+  <artifactId>Workspaces_dsl</artifactId>
   <version>1.0-SNAPSHOT</version>
-
-  <parent>
-    <groupId>org.jetbrains.teamcity</groupId>
-    <artifactId>configs-dsl-kotlin-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
 
   <repositories>
     <repository>
       <id>jetbrains-all</id>
-      <url>https://download.jetbrains.com/teamcity-repository</url>
+      <url>http://download.jetbrains.com/teamcity-repository</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
     </repository>
     <repository>
       <id>teamcity-server</id>
-      <url>http://localhost:8111/app/dsl-plugins-repository</url>
+      <url>https://build.cnsga.aws.prod.au.internal.cba/app/dsl-plugins-repository</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -32,12 +30,12 @@
   <pluginRepositories>
     <pluginRepository>
       <id>JetBrains</id>
-      <url>https://download.jetbrains.com/teamcity-repository</url>
+      <url>http://download.jetbrains.com/teamcity-repository</url>
     </pluginRepository>
   </pluginRepositories>
 
   <build>
-    <sourceDirectory>${basedir}</sourceDirectory>
+    <sourceDirectory>.</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>kotlin-maven-plugin</artifactId>
@@ -90,7 +88,7 @@
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
-      <artifactId>kotlin-stdlib-jdk8</artifactId>
+      <artifactId>kotlin-stdlib</artifactId>
       <version>${kotlin.version}</version>
       <scope>compile</scope>
     </dependency>
