@@ -12,6 +12,9 @@ accordingly, and delete the patch script.
 changeProject(DslContext.projectId) {
     params {
         add {
+            param("env.TC_PASS", "admin")
+        }
+        add {
             param("env.TC_USER", "admin")
         }
     }
